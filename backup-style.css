@@ -1,3 +1,5 @@
+/* =============== BASE =============== */
+
 body {
   margin: 0;
 }
@@ -13,6 +15,9 @@ main {
   margin: auto;
   padding: 40px 20px;
 }
+
+
+/* =============== HEADER + NAV (GLOBAL) =============== */
 
 .header {
   font-family: "Cooper Black", serif;
@@ -34,6 +39,33 @@ nav {
   background-color: #fff;
 }
 
+.paginaslink a {
+  color: red;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+  font-size: 1.65rem;
+}
+
+.paginaslink a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: red;
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+}
+
+.paginaslink a:hover::after {
+  width: 100%;
+}
+
+
+/* =============== LOGOS (GLOBAL) =============== */
+
 .logo-link {
   display: flex;
   align-items: center;
@@ -51,179 +83,22 @@ nav {
   height: clamp(30px, 4.5vw, 60px);
 }
 
-.paginaslink a {
-  color: red;
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 1px;
-  position: relative;
-  font-size: 1.65rem;
-}
-.paginaslink a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: red;
-  left: 0;
-  bottom: -6px;
-  transition: 0.3s;
-}
-.paginaslink a:hover::after {
-  width: 100%;
-}
 
-.navbar {
-  background: white;
-}
+/* =============== FONDOS =============== */
 
-.nav-link {
-  color: red !important;
-  font-weight: 700;
-  font-size: 1.5rem;
-  padding: 0.75rem 1rem;
-}
-.nav-link:hover {
-  color: darkred !important;
-}
-
-.navbar-toggler {
-  border: none;
-}
-
-.navbar-toggler-icon {
-  background-image: none;
-  width: 24px;
-  height: 2px;
-  background: red;
-  position: relative;
-}
-.navbar-toggler-icon::before, .navbar-toggler-icon::after {
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 2px;
-  background: red;
-  left: 0;
-}
-.navbar-toggler-icon::before {
-  top: -6px;
-}
-.navbar-toggler-icon::after {
-  top: 6px;
-}
-
-.nav {
-  width: 100%;
-  position: static;
-  height: auto;
-  max-height: none;
-  overflow: visible;
-  background: transparent;
-  border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-  padding-top: 10px;
-}
-.nav .paginaslink {
-  display: flex;
-  gap: 50px;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-  justify-content: center;
-}
-.nav .paginaslink a {
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.nav-toggle {
-  display: none;
-}
-
-.nav-hamburger {
-  display: none;
-  width: 44px;
-  height: 44px;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 6px;
-}
-.nav-hamburger span {
-  display: block;
-  width: 26px;
-  height: 3px;
-  background: #000;
-  border-radius: 999px;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-@media (max-width: 820px) {
-  .header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 16px;
-    text-align: left;
-  }
-  .logo-link {
-    margin-bottom: 0;
-  }
-  .nav-hamburger {
-    display: flex;
-    z-index: 1001;
-  }
-  .nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.25s ease;
-    background: rgba(255, 255, 255, 0.97);
-    backdrop-filter: blur(6px);
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    z-index: 999;
-    padding-top: 0;
-  }
-  .nav .paginaslink {
-    flex-direction: column;
-    gap: 0;
-    padding: 10px 0;
-    align-items: center;
-    justify-content: center;
-  }
-  .nav .paginaslink li a {
-    display: block;
-    padding: 14px 20px;
-    font-size: 18px;
-    text-align: center;
-  }
-  .nav-toggle:checked ~ .nav {
-    max-height: 420px;
-  }
-  .nav-toggle:checked + .nav-hamburger span:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
-  }
-  .nav-toggle:checked + .nav-hamburger span:nth-child(2) {
-    opacity: 0;
-  }
-  .nav-toggle:checked + .nav-hamburger span:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
-  }
-}
 .bodyb {
   background-color: #fff;
 }
 
 .body-menu {
   font-family: "Cooper Black", serif;
-  background: radial-gradient(800px 400px at 50% -120px, rgba(255, 0, 0, 0.1), transparent 60%), linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+  background:
+    radial-gradient(800px 400px at 50% -120px, rgba(255, 0, 0, 0.10), transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
 }
+
+
+/* =============== MENÚ (pizzas / burgers / chivitos...) =============== */
 
 .menu-page {
   max-width: 1060px;
@@ -240,6 +115,7 @@ nav {
   box-shadow: 0 14px 35px rgba(0, 0, 0, 0.06);
   margin-bottom: 26px;
 }
+
 .menu-hero h2 {
   margin: 0 0 10px;
   font-size: clamp(30px, 3.4vw, 44px);
@@ -248,6 +124,7 @@ nav {
   display: inline-block;
   padding-bottom: 10px;
 }
+
 .menu-hero h2::after {
   content: "";
   position: absolute;
@@ -260,6 +137,7 @@ nav {
   background: linear-gradient(90deg, transparent, red, transparent);
   opacity: 0.85;
 }
+
 .menu-hero__text {
   margin: 0 auto 12px;
   max-width: 70ch;
@@ -293,6 +171,7 @@ nav {
   align-items: center;
   gap: 12px;
 }
+
 .menu-title::after {
   content: "";
   flex: 1;
@@ -314,11 +193,14 @@ nav {
   border: 1px solid rgba(0, 0, 0, 0.07);
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-areas: "name price" "desc desc";
+  grid-template-areas:
+    "name price"
+    "desc desc";
   gap: 8px 10px;
   position: relative;
   overflow: hidden;
 }
+
 .menu-item::before {
   content: "";
   position: absolute;
@@ -329,6 +211,7 @@ nav {
   background: rgba(255, 0, 0, 0.07);
   border-radius: 24px;
 }
+
 .menu-item .menu-name {
   grid-area: name;
   font-size: 0.78rem;
@@ -339,6 +222,7 @@ nav {
   position: relative;
   z-index: 1;
 }
+
 .menu-item .menu-price {
   grid-area: price;
   font-size: 1.22rem;
@@ -352,6 +236,7 @@ nav {
   position: relative;
   z-index: 1;
 }
+
 .menu-item .menu-desc {
   grid-area: desc;
   margin: 0;
@@ -362,12 +247,28 @@ nav {
   position: relative;
   z-index: 1;
 }
+
 .menu-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 16px 35px rgba(0, 0, 0, 0.08);
   border-color: rgba(255, 0, 0, 0.22);
   transition: 0.16s ease;
 }
+
+@media (max-width: 900px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =============== BURGERS PROMO (papas + bebida) =============== */
 
 .menu-promo {
   display: flex;
@@ -382,10 +283,10 @@ nav {
   padding: 14px 20px;
   border-radius: 18px;
   background: linear-gradient(180deg, #fff 0%, #fafafa 100%);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, .08);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .06);
   font-weight: 900;
-  letter-spacing: 0.3px;
+  letter-spacing: .3px;
 }
 
 .promo-icon {
@@ -394,52 +295,56 @@ nav {
 
 .promo-text {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: .95rem;
   color: #111;
 }
+
 .promo-text strong {
   color: red;
 }
 
-@media (max-width: 900px) {
-  .menu-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-@media (max-width: 560px) {
-  .menu-grid {
-    grid-template-columns: 1fr;
-  }
-}
+
+/* =============== INDEX (PROMOS XXL) =============== */
+/* IMPORTANTE: en index.html usa <body class="bodyb body-index"> */
+
 .body-index {
   background: #b00000;
 }
+
 .body-index .header {
   padding: 12px 20px 6px;
 }
+
 .body-index .logo-top {
   height: clamp(42px, 6vw, 78px);
 }
+
 .body-index .logo-text {
   height: clamp(28px, 4.8vw, 62px);
 }
+
 .body-index .paginaslink {
   padding: 8px 0;
 }
+
 .body-index .index-page {
   max-width: 1200px;
   margin: 0 auto;
   padding: 130px 20px 50px;
 }
+
 .body-index .promo-hero {
   border-radius: 34px;
   padding: 50px 40px 44px;
-  background: radial-gradient(1000px 600px at 50% 0%, rgba(255, 255, 255, 0.18), transparent 60%), linear-gradient(180deg, #e00000 0%, #8a0000 100%);
-  box-shadow: 0 35px 90px rgba(0, 0, 0, 0.45);
+  background:
+    radial-gradient(1000px 600px at 50% 0%, rgba(255,255,255,.18), transparent 60%),
+    linear-gradient(180deg, #e00000 0%, #8a0000 100%);
+  box-shadow: 0 35px 90px rgba(0,0,0,.45);
   color: #fff;
   text-align: center;
-  border: 2px solid rgba(255, 255, 255, 0.25);
+  border: 2px solid rgba(255,255,255,.25);
 }
+
 .body-index .promo-hero__top {
   display: flex;
   align-items: center;
@@ -447,35 +352,41 @@ nav {
   gap: 18px;
   margin-bottom: 12px;
 }
+
 .body-index .promo-hero__logo {
   height: 86px;
-  filter: drop-shadow(0 16px 30px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(0 16px 30px rgba(0,0,0,.45));
 }
+
 .body-index .promo-hero__title {
   font-size: clamp(64px, 7vw, 92px);
   letter-spacing: 6px;
   margin: 0;
 }
+
 .body-index .promo-hero__subtitle {
   margin: 18px 0 34px;
   font-size: 1.4rem;
   letter-spacing: 3px;
   font-weight: 1000;
 }
+
 .body-index .promo-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 34px;
 }
+
 .body-index .promo-card {
   border-radius: 36px;
   padding: 46px 36px 40px;
-  background: rgba(255, 255, 255, 0.14);
-  border: 2px solid rgba(255, 255, 255, 0.35);
-  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.45);
+  background: rgba(255,255,255,.14);
+  border: 2px solid rgba(255,255,255,.35);
+  box-shadow: 0 35px 80px rgba(0,0,0,.45);
   position: relative;
   overflow: hidden;
 }
+
 .body-index .promo-card::before {
   content: "";
   position: absolute;
@@ -483,20 +394,23 @@ nav {
   width: 260px;
   height: 260px;
   transform: rotate(25deg);
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(255,255,255,.18);
   border-radius: 60px;
 }
+
 .body-index .promo-card__title {
   font-size: 2.2rem;
   letter-spacing: 3px;
   font-weight: 1000;
   margin-bottom: 26px;
 }
+
 .body-index .promo-card__text {
   font-size: 1.9rem;
   line-height: 1.45;
   margin-bottom: 32px;
 }
+
 .body-index .promo-card__price {
   display: inline-block;
   padding: 18px 42px;
@@ -505,8 +419,9 @@ nav {
   color: #9a0000;
   font-size: 2.8rem;
   font-weight: 1000;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 25px 60px rgba(0,0,0,.45);
 }
+
 .body-index .promo-slogan {
   margin-top: 40px;
   font-size: 1.6rem;
@@ -518,42 +433,45 @@ nav {
   .body-index .promo-grid {
     grid-template-columns: 1fr;
   }
+
   .body-index .promo-card__text {
     font-size: 1.6rem;
   }
+
   .body-index .promo-card__price {
     font-size: 2.3rem;
   }
+
   .body-index .promo-hero__title {
     font-size: clamp(52px, 10vw, 72px);
   }
 }
+
+
+/* =============== FOOTER (GLOBAL todas las páginas) =============== */
+
 .index-footer {
   max-width: 1100px;
   margin: 40px auto;
   padding: 22px 20px;
   border-radius: 26px;
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+  background: rgba(255,255,255,.92);
+  box-shadow: 0 18px 45px rgba(0,0,0,.22);
   text-align: center;
 }
+
 .index-footer__line {
   margin: 0 0 14px;
   font-weight: 1000;
   letter-spacing: 1px;
   color: #111;
 }
+
 .index-footer__links {
   display: flex;
   justify-content: center;
   gap: 12px;
   margin-bottom: 12px;
-}
-.index-footer__credits {
-  margin: 0;
-  font-size: 0.85rem;
-  opacity: 0.7;
-  font-weight: 600;
 }
 
 .footer-pill {
@@ -565,9 +483,17 @@ nav {
   font-weight: 1000;
   border: 2px solid red;
 }
+
 .footer-pill--alt {
   background: transparent;
   color: red;
+}
+
+.index-footer__credits {
+  margin: 0;
+  font-size: .85rem;
+  opacity: .7;
+  font-weight: 600;
 }
 
 .footer-map-link {
@@ -575,76 +501,177 @@ nav {
   text-decoration: none;
   font-weight: 1000;
 }
+
 .footer-map-link:hover {
   text-decoration: underline;
 }
 
-.galeria {
-  max-width: 1100px;
-  margin: auto;
-  padding: 120px 20px 60px;
-  text-align: center;
+
+/* =============== NAVBAR EXTRA =============== */
+
+.navbar {
+  background: white;
 }
 
-.galeria-titulo {
-  margin: 0 0 28px;
-  font-size: 2rem;
-  letter-spacing: 2px;
-  color: #111;
+.nav-link {
+  color: red !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 0.75rem 1rem;
 }
 
-.galeria-slider {
+.nav-link:hover {
+  color: darkred !important;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: none;
+  width: 24px;
+  height: 2px;
+  background: red;
+  position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: red;
+  left: 0;
+}
+
+.navbar-toggler-icon::before {
+  top: -6px;
+}
+
+.navbar-toggler-icon::after {
+  top: 6px;
+}
+
+
+/* =============== NAV DESKTOP + MOBILE =============== */
+
+.nav {
+  width: 100%;
+  position: static;
+  height: auto;
+  max-height: none;
+  overflow: visible;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: 10px;
+}
+
+.nav .paginaslink {
   display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 10px 6px 14px;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
 }
 
-.galeria-slider img {
-  flex: 0 0 220px;
-  width: 220px;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 18px;
-  scroll-snap-align: center;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.nav .paginaslink a {
+  text-decoration: none;
+  font-size: 18px;
 }
 
-.galeria-slider img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.22);
+.nav-toggle {
+  display: none;
 }
 
-.galeria-slider::-webkit-scrollbar {
-  height: 8px;
+.nav-hamburger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.galeria-slider::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.08);
+.nav-hamburger span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: #000;
   border-radius: 999px;
+  transition: transform .2s ease, opacity .2s ease;
 }
 
-.galeria-slider::-webkit-scrollbar-thumb {
-  background: rgba(255, 0, 0, 0.45);
-  border-radius: 999px;
-}
 
-@media (max-width: 560px) {
-  .galeria {
-    padding: 110px 14px 50px;
+/* =============== MOBILE =============== */
+
+@media (max-width: 820px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    text-align: left;
   }
-  .galeria-slider {
-    gap: 12px;
+
+  .logo-link {
+    margin-bottom: 0;
   }
-  .galeria-slider img {
-    flex: 0 0 180px;
-    width: 180px;
-    height: 240px;
+
+  .nav-hamburger {
+    display: flex;
+    z-index: 1001;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .25s ease;
+    background: rgba(255,255,255,.97);
+    backdrop-filter: blur(6px);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    z-index: 999;
+    padding-top: 0;
+  }
+
+  .nav .paginaslink {
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav .paginaslink li a {
+    display: block;
+    padding: 14px 20px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .nav-toggle:checked ~ .nav {
+    max-height: 420px;
+  }
+
+  .nav-toggle:checked + .nav-hamburger span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .nav-toggle:checked + .nav-hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle:checked + .nav-hamburger span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
   }
 }
-
-/*# sourceMappingURL=style.css.map */

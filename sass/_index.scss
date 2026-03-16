@@ -1,0 +1,141 @@
+.body-index {
+  background: #b00000;
+
+  .header {
+    padding: 12px 20px 6px;
+  }
+
+  .logo-top {
+    height: clamp(42px, 6vw, 78px);
+  }
+
+  .logo-text {
+    height: clamp(28px, 4.8vw, 62px);
+  }
+
+  .paginaslink {
+    padding: 8px 0;
+  }
+
+  .index-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 130px 20px 50px;
+  }
+
+  .promo-hero {
+    border-radius: 34px;
+    padding: 50px 40px 44px;
+    background:
+      radial-gradient(1000px 600px at 50% 0%, rgba(255, 255, 255, 0.18), transparent 60%),
+      linear-gradient(180deg, #e00000 0%, #8a0000 100%);
+    box-shadow: 0 35px 90px rgba(0, 0, 0, 0.45);
+    color: #fff;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+
+    &__top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 12px;
+    }
+
+    &__logo {
+      height: 86px;
+      filter: drop-shadow(0 16px 30px rgba(0, 0, 0, 0.45));
+    }
+
+    &__title {
+      font-size: clamp(64px, 7vw, 92px);
+      letter-spacing: 6px;
+      margin: 0;
+    }
+
+    &__subtitle {
+      margin: 18px 0 34px;
+      font-size: 1.4rem;
+      letter-spacing: 3px;
+      font-weight: 1000;
+    }
+  }
+
+  .promo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 34px;
+  }
+
+  .promo-card {
+    border-radius: 36px;
+    padding: 46px 36px 40px;
+    background: rgba(255, 255, 255, 0.14);
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.45);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: -90px -120px auto auto;
+      width: 260px;
+      height: 260px;
+      transform: rotate(25deg);
+      background: rgba(255, 255, 255, 0.18);
+      border-radius: 60px;
+    }
+
+    &__title {
+      font-size: 2.2rem;
+      letter-spacing: 3px;
+      font-weight: 1000;
+      margin-bottom: 26px;
+    }
+
+    &__text {
+      font-size: 1.9rem;
+      line-height: 1.45;
+      margin-bottom: 32px;
+    }
+
+    &__price {
+      display: inline-block;
+      padding: 18px 42px;
+      border-radius: 999px;
+      background: #fff;
+      color: #9a0000;
+      font-size: 2.8rem;
+      font-weight: 1000;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+    }
+  }
+
+  .promo-slogan {
+    margin-top: 40px;
+    font-size: 1.6rem;
+    letter-spacing: 4px;
+    font-weight: 1000;
+  }
+}
+
+@media (max-width: 1000px) {
+  .body-index {
+    .promo-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .promo-card__text {
+      font-size: 1.6rem;
+    }
+
+    .promo-card__price {
+      font-size: 2.3rem;
+    }
+
+    .promo-hero__title {
+      font-size: clamp(52px, 10vw, 72px);
+    }
+  }
+}

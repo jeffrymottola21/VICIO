@@ -1,0 +1,210 @@
+.bodyb {
+  background-color: $color-white;
+}
+
+.body-menu {
+  font-family: $font-brand;
+  background:
+    radial-gradient(800px 400px at 50% -120px, rgba(255, 0, 0, 0.10), transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+}
+
+.menu-page {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 120px 20px 70px;
+}
+
+.menu-hero {
+  text-align: center;
+  padding: 16px 16px 18px;
+  border-radius: 22px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.06);
+  margin-bottom: 26px;
+
+  h2 {
+    margin: 0 0 10px;
+    font-size: clamp(30px, 3.4vw, 44px);
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 86%;
+      height: 4px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, transparent, red, transparent);
+      opacity: 0.85;
+    }
+  }
+
+  &__text {
+    margin: 0 auto 12px;
+    max-width: 70ch;
+    color: $color-text-soft;
+    opacity: 0.9;
+    line-height: 1.35;
+  }
+}
+
+.img-menu {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  display: block;
+  margin: 12px auto 0;
+}
+
+.menu-block {
+  margin: 28px 0;
+  padding-top: 8px;
+}
+
+.menu-title {
+  color: $color-text;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.9), rgba(255, 0, 0, 0.05));
+  }
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.menu-item {
+  border-radius: 18px;
+  padding: 12px 12px 10px;
+  background: linear-gradient(180deg, #fff 0%, #fbfbfb 100%);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "name price"
+    "desc desc";
+  gap: 8px 10px;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -40px -60px auto auto;
+    width: 140px;
+    height: 140px;
+    transform: rotate(25deg);
+    background: rgba(255, 0, 0, 0.07);
+    border-radius: 24px;
+  }
+
+  .menu-name {
+    grid-area: name;
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    position: relative;
+    z-index: 1;
+  }
+
+  .menu-price {
+    grid-area: price;
+    font-size: 1.22rem;
+    font-weight: 1000;
+    color: $color-white;
+    background: $color-primary;
+    padding: 6px 10px;
+    border-radius: 999px;
+    box-shadow: 0 10px 18px rgba(255, 0, 0, 0.25);
+    align-self: start;
+    position: relative;
+    z-index: 1;
+  }
+
+  .menu-desc {
+    grid-area: desc;
+    margin: 0;
+    color: $color-text;
+    font-size: 0.72rem;
+    line-height: 1.35;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.08);
+    border-color: rgba(255, 0, 0, 0.22);
+    transition: 0.16s ease;
+  }
+}
+
+.menu-promo {
+  display: flex;
+  justify-content: center;
+  margin: 12px 0 28px;
+}
+
+.promo-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 20px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #fff 0%, #fafafa 100%);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+  font-weight: 900;
+  letter-spacing: 0.3px;
+}
+
+.promo-icon {
+  font-size: 1.6rem;
+}
+
+.promo-text {
+  margin: 0;
+  font-size: 0.95rem;
+  color: $color-text;
+
+  strong {
+    color: $color-primary;
+  }
+}
+
+@media (max-width: 900px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}

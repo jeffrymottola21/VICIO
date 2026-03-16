@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.header {
+  font-family: $font-brand;
+  background: $color-white;
+  padding: 16px 20px 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+nav {
+  background-color: $color-white;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+
+.logo-top {
+  height: clamp(46px, 6vw, 80px);
+}
+
+.logo-text {
+  height: clamp(30px, 4.5vw, 60px);
+}
