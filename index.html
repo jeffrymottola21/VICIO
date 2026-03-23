@@ -3,73 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VICIO BURGERS Y PIZZAS</title>
+  <meta name="description" content="Las mejores hamburguesas en Montevideo...">
+  <title>VICIO</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="./styles/style.css">
-  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="shortcut icon" href=""> 
 </head>
 
 <body class="bodyb body-index">
 
 <header class="header">
+  <a href="./index.html" class="logo-link" aria-label="Ir al inicio">
+    <img class="logo-top" src="./assets/LOGO VICIO B.png" alt="Logo VICIO">
+    <img class="logo-text" src="./assets/LOGO ESCRITO.png" alt="VICIO">
+  </a>
 
-  <nav class="navbar navbar-expand-lg w-100">
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
 
-    <div class="container-fluid justify-content-center">
+  <label for="nav-toggle" class="nav-hamburger" aria-label="Abrir menú">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
 
-      <!-- LOGO -->
-      <a href="./index.html" class="navbar-brand logo-link d-flex align-items-center gap-2">
-        <img class="logo-top" src="./assets/LOGO VICIO B.png" alt="Logo VICIO">
-        <img class="logo-text" src="./assets/LOGO ESCRITO.png" alt="VICIO">
-      </a>
-
-      <!-- BOTÓN MÓVIL -->
-      <button class="navbar-toggler ms-auto" 
-              type="button" 
-              data-bs-toggle="collapse" 
-              data-bs-target="#menuVicio">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- MENÚ -->
-      <div class="collapse navbar-collapse justify-content-center" id="menuVicio">
-        <ul class="navbar-nav gap-lg-5 text-center">
-
-          <li class="nav-item">
-            <a class="nav-link" href="./pages/pizzas.html">PIZZA & PIZZETAS</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="./pages/burgers.html">BURGERS</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="./pages/chivitos.html">
-              CHIVITOS
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="./pages/milanesas.html">
-              MILANESAS
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="./pages/galeria.html">GALERIA</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="./pages/contacto.html">CONTACTO</a>
-          </li>
-
-        </ul>
-      </div>
-
-    </div>
-
+  <nav class="nav" aria-label="Menú principal">
+    <ul class="paginaslink">
+      <li><a href="./pages/pizzas.html">PIZZA &amp; PIZZETAS</a></li>
+      <li><a href="./pages/burgers.html">BURGERS</a></li>
+      <li><a href="./pages/chivitos.html">CHIVITOS</a></li>
+      <li><a href="./pages/milanesas.html">MILANESAS</a></li>
+      <li><a href="./pages/galeria.html">GALERIA</a></li>
+      <li><a href="./pages/contacto.html">CONTACTO</a></li>
+    </ul>
   </nav>
-
 </header>
 
   <!-- MAIN -->
