@@ -30,6 +30,7 @@
 }
 
 .footer-pill {
+  transition: all 0.3s ease;
   padding: 12px 18px;
   border-radius: 999px;
   background: $color-primary;
@@ -37,6 +38,12 @@
   text-decoration: none;
   font-weight: 1000;
   border: 2px solid $color-primary;
+  &:hover {
+    transform: translateY(-3px);
+    background-color: black;
+    color: white;
+  }
+
 
   &--alt {
     background: transparent;
@@ -51,5 +58,10 @@
 
   &:hover {
     text-decoration: underline;
+    &:hover {
+    transform: translateY(-3px);
+    background-color: black;
+    color: white;
+  }
   }
 }
